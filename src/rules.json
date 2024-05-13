@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "conditions": [
+        {
+          "field": "from",
+          "predicate": "contains",
+          "value": "[email address removed]"
+        },
+        {
+          "field": "subject",
+          "predicate": "notcontains",
+          "value": "marketing"
+        }
+      ],
+      "predicate": "any",
+      "actions": [
+        {
+          "type": "mark as read"
+        },
+        {
+          "type": "move message",
+          "value": "spam"
+        }
+      ]
+    }
+    
+  ]
+}
